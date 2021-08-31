@@ -6,7 +6,7 @@ import Player from './pig-dice.js';
 
 player1 = new Player("player1", 0, 0);
 player2 = new Player("player2", 0, 0);
-var turnCounter = 1;
+// var turnCounter = 1;
 
 $(document).ready(function () {
   $("#player-1").addClass("player-1");

@@ -1,4 +1,5 @@
 var turnCounter = 1;
+
 export function Player(name, score, turnScore) {
   this.name = name;
   this.score = score;

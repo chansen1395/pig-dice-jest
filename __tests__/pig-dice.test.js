@@ -16,12 +16,19 @@ describe('Player', () => {
     expect(player.score).toEqual(0);
     expect(player.turnScore).toEqual(10);
   });
-
+  
   test('Player rolling dice should be between 1 & 6', () => {
     const player = new Player("player1", 0, 0);
     player.rollDice();
     expect(player.turnScore).toBeLessThanOrEqual(6);
     expect(player.turnScore).toBeGreaterThanOrEqual(1);
+  });
+
+  test('Player hold should change turn and save the score', () => {
+    const player = new Player("player1", 0, 0);
+    player.hold();
+    expect(player.turnScore).toEqual(0);
+    expect(player.score).toEqual(player.turnScore);
   });
 
 });
