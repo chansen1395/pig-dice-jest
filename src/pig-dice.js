@@ -1,4 +1,4 @@
-
+var turnCounter = 1;
 export function Player(name, score, turnScore) {
   this.name = name;
   this.score = score;
@@ -6,7 +6,7 @@ export function Player(name, score, turnScore) {
 }
 
 Player.prototype.rollDice = function () {
-  tempScore = Math.floor(Math.random() * 6 + 1);
+  let tempScore = Math.floor(Math.random() * 6 + 1);
   console.log("Roll score: " + tempScore);
   if (tempScore === 1) {
     this.turnScore = 0;
